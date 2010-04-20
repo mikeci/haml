@@ -446,8 +446,9 @@ require 'metric_fu'
 
 MetricFu::Configuration.run do |config|
    #define which metrics you want to use
-   config.metrics  = [:stats]
-   config.graphs   = []
+   config.metrics  = [:saikuro, :stats, :flog, :flay, :reek, :roodi, :rcov]
+   config.graphs   = [:flog, :flay, :reek, :roodi, :rcov]
+
    config.flay     = { :dirs_to_flay => ['app', 'lib'],
 		            :minimum_score => 100  } 
    config.flog     = { :dirs_to_flog => ['app', 'lib']  }
