@@ -23,6 +23,7 @@ else
 end
 
 require 'rake/testtask'
+require 'metric_fu'
 
 Rake::TestTask.new do |t|
   t.libs << 'lib'
